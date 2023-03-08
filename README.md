@@ -17,7 +17,7 @@ Dependências Internas
 =============================
 ```mermaid
 graph TD
-    subgraph Core + VAGAS_DESIGN_SYSTEM
+    subgraph App + VAGAS_DESIGN_SYSTEM
     A[App] -->B[Module]
     end
 ```
@@ -39,6 +39,9 @@ Recursos — Referências de API
 * Font Awesome Flutter: `package:font_awesome_flutter/font_awesome_flutter.dart` Pacote responsável pelas fontes e ícones utilizados na aplicação.
 * Auto Size Text: `package:auto_size_text/auto_size_text.dart` Pacote responsável pela responsividade dos textos utilizados na aplicação.
 * Flutter Svg: `package:flutter_svg/flutter_svg.dart` Pacote responsável pela renderização dos arquivos SVGs utilizados na aplicação.
+
+### Widgets
+* Responsive Text Widget: `package:vagas_design_system/src/widgets/responsive_text_widget.dart` Componente responsável pela responsividade de textos na aplicação.
 
 ### Pages
 * Loading Page: `package:vagas_design_system/src/pages/loading_page.dart` Página de carregamento.
