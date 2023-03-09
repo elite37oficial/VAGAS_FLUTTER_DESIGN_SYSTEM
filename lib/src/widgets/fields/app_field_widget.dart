@@ -64,7 +64,7 @@ class _AppFieldWidgetState extends State<AppFieldWidget> {
         Visibility(
           visible: widget.label == null,
           child: ResponsiveTextWidget(
-            text: widget.label!,
+            text: widget.label ?? "",
             textStyle: widget.labelStyle,
             hintSemantics: widget.labelSemantic,
             tooltipSemantics: widget.labelTooltip,
@@ -97,7 +97,7 @@ class _AppFieldWidgetState extends State<AppFieldWidget> {
                   onFieldSubmitted: widget.onFieldSubmitted,
                   keyboardType: widget.inputType,
                   cursorColor: widget.onError ? AppColors.red : AppColors.grey,
-                  cursorHeight: 30,
+                  cursorHeight: 40,
                   style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.normal,
