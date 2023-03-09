@@ -9,7 +9,8 @@ class ResponsiveTextWidget extends StatelessWidget {
   final double? maxFontSize;
   final double? textScaleFactor;
   final int? maxLines;
-
+  final String? hintSemantics;
+  final String? tooltipSemantics;
   const ResponsiveTextWidget({
     Key? key,
     required this.text,
@@ -17,26 +18,32 @@ class ResponsiveTextWidget extends StatelessWidget {
     this.maxLines = 1,
     this.minFontSize,
     this.maxFontSize,
+    this.hintSemantics,
+    this.tooltipSemantics,
     this.textScaleFactor = 1,
     this.textAlign = TextAlign.start,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return AutoSizeText(
-      text,
-      overflow: TextOverflow.ellipsis,
-      style: textStyle ??
-          const TextStyle(
-            color: Colors.black,
-            fontSize: 18,
-            fontWeight: FontWeight.w400,
-          ),
-      textAlign: textAlign,
-      maxLines: maxLines,
-      textScaleFactor: textScaleFactor,
-      maxFontSize: maxFontSize ?? double.infinity,
-      minFontSize: minFontSize ?? 12,
+    return Semantics(
+      hint: hintSemantics,
+      tooltip: tooltipSemantics,
+      child: AutoSizeText(
+        text,
+        overflow: TextOverflow.ellipsis,
+        style: textStyle ??
+            const TextStyle(
+              color: Colors.black,
+              fontSize: 18,
+              fontWeight: FontWeight.w400,
+            ),
+        textAlign: textAlign,
+        maxLines: maxLines,
+        textScaleFactor: textScaleFactor,
+        maxFontSize: maxFontSize ?? double.infinity,
+        minFontSize: minFontSize ?? 12,
+      ),
     );
   }
 }

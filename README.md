@@ -3,13 +3,20 @@ O módulo `VAGAS_DESIGN_SYSTEM` é responsável por reunir e disponibilizar comp
 
 # Instalação
 Para instalar o Módulo `VAGAS_DESIGN_SYSTEM` basta seguir os seguintes passos:
-1.	Importar o pacote `VAGAS_DESIGN_SYSTEM` no arquivo `pubspec.yaml` do seu projeto.
+1.	Importar o pacote `VAGAS_DESIGN_SYSTEM` no arquivo `pubspec.yaml` do seu projeto.  
+    ``` yaml
+    vagas_design_system:
+    # path: ../../VAGAS_FLUTTER_DESIGN_SYSTEM/    #Para trabalhar com o pacote localmente.
+    git:
+      url: https://github.com/elite37oficial/VAGAS_FLUTTER_DESIGN_SYSTEM
+      ref: main
+    ```
 2.	Rodar o comando `Get Packages` do flutter.
 3.	Importar o pacote `VAGAS_DESIGN_SYSTEM` nos arquivos `.dart` que deseja utilizar os componentes `VAGAS_DESIGN_SYSTEM`.
 
 
-=======
-O pacote `VAGAS_DESIGN_SYSTEM` reúne os componentes de regras de negócio, integração com API, models, rotas e tokens.
+=======  
+O pacote `VAGAS_DESIGN_SYSTEM` reúne os componentes visuais, arquivos de configuração de temas e cores, imagens, páginas e pacotes.  
 Criado em: 03/2023
 
 
@@ -41,9 +48,12 @@ Recursos — Referências de API
 * Flutter Svg: `package:flutter_svg/flutter_svg.dart` Pacote responsável pela renderização dos arquivos SVGs utilizados na aplicação.
 
 ### Widgets
-* Responsive Text Widget: `package:vagas_design_system/src/widgets/responsive_text_widget.dart` Componente responsável pela responsividade de textos na aplicação.
+* Responsive Text Widget: `package:vagas_design_system/src/widgets/texts/responsive_text_widget.dart` Componente responsável pela responsividade de textos na aplicação.
+* Social Circle Button Widget: `package:vagas_design_system/src/widgets/buttons/social_circle_button_widget.dart` Componente do botão circular de mídias sociais.
+* App Field Widget: `package:vagas_design_system/src/widgets/fields/app_field_widget.dart` Componente responsável pelos campos de textos da aplicação.
 
 ### Pages
 * Loading Page: `package:vagas_design_system/src/pages/loading_page.dart` Página de carregamento.
+* Error Page: `package:vagas_design_system/src/pages/error_page.dart` Página de Erro padrão.
 
 
