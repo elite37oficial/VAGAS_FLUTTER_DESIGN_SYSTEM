@@ -16,7 +16,7 @@ Para instalar o Módulo `VAGAS_DESIGN_SYSTEM` basta seguir os seguintes passos:
 
 
 =======  
-O pacote `VAGAS_DESIGN_SYSTEM` reúne os componentes de regras de negócio, integração com API, models, rotas e tokens.  
+O pacote `VAGAS_DESIGN_SYSTEM` reúne os componentes visuais, arquivos de configuração de temas e cores, imagens, páginas e pacotes.  
 Criado em: 03/2023
 
 
