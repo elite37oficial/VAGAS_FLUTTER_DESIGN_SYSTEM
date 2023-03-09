@@ -43,7 +43,8 @@ Recursos — Referências de API
 * App Images: `package:vagas_design_system/src/themes/app_images.dart` Abstração dos caminhos dos imagens para serem utilizadas na aplicação.
 
 ### Packages
-* Font Awesome Flutter: `package:font_awesome_flutter/font_awesome_flutter.dart` Pacote responsável pelas fontes e ícones utilizados na aplicação.
+* Font Awesome Flutter: `package:font_awesome_flutter/font_awesome_flutter.dart` Pacote responsável pelos ícones utilizados na aplicação.
+* Google Fonts: `package:google_fonts/google_fonts.dart` Pacote responsável pelas fontes utilizados na aplicação.
 * Auto Size Text: `package:auto_size_text/auto_size_text.dart` Pacote responsável pela responsividade dos textos utilizados na aplicação.
 * Flutter Svg: `package:flutter_svg/flutter_svg.dart` Pacote responsável pela renderização dos arquivos SVGs utilizados na aplicação.
 
