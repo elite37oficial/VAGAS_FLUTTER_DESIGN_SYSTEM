@@ -51,6 +51,7 @@ Recursos — Referências de API
 * Responsive Text Widget: `package:vagas_design_system/src/widgets/responsive_text_widget.dart` Componente responsável pela responsividade de textos na aplicação.
 
 ### Pages
-* Loading Page: `package:vagas_design_system/src/pages/loading_page.dart` Página de carregamento.
+* Loading Page: `package:vagas_design_system/src/pages/loading_page.dart` Página de carregamento padrão.
+* Error Page: `package:vagas_design_system/src/pages/error_page.dart` Página de Erro padrão.
 
 
