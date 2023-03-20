@@ -53,5 +53,3 @@ Recursos — Referências de API
 ### Pages
 * Loading Page: `package:vagas_design_system/src/pages/loading_page.dart` Página de carregamento padrão.
 * Error Page: `package:vagas_design_system/src/pages/error_page.dart` Página de Erro padrão.
-
-
