@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vagas_design_system/src/widgets/responsive_text_widget.dart';
+import 'package:vagas_design_system/src/widgets/texts/responsive_text_widget.dart';
 
 class ErrorPage extends StatefulWidget {
   const ErrorPage({Key? key}) : super(key: key);
