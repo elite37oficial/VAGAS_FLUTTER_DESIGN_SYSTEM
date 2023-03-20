@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
 
 class SocialCircleButtonWidget extends StatelessWidget {
   final double height;
@@ -25,6 +26,10 @@ class SocialCircleButtonWidget extends StatelessWidget {
       button: true,
       hint: hint,
       tooltip: tooltip,
+      value: hint,
+      label: hint,
+      hidden: false,
+      tagForChildren: SemanticsTag(hint ?? "button"),
       child: InkWell(
         onTap: () => onTap(),
         borderRadius: BorderRadius.circular(50),

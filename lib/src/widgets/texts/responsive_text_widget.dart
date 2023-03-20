@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
 import 'package:vagas_design_system/vagas_design_system.dart';
 
 class ResponsiveTextWidget extends StatelessWidget {
@@ -15,7 +16,7 @@ class ResponsiveTextWidget extends StatelessWidget {
     Key? key,
     required this.text,
     this.textStyle,
-    this.maxLines = 1,
+    this.maxLines,
     this.minFontSize,
     this.maxFontSize,
     this.hintSemantics,
@@ -29,20 +30,32 @@ class ResponsiveTextWidget extends StatelessWidget {
     return Semantics(
       hint: hintSemantics,
       tooltip: tooltipSemantics,
-      child: AutoSizeText(
-        text,
-        overflow: TextOverflow.ellipsis,
-        style: textStyle ??
-            const TextStyle(
-              color: Colors.black,
-              fontSize: 18,
-              fontWeight: FontWeight.w400,
-            ),
-        textAlign: textAlign,
-        maxLines: maxLines,
-        textScaleFactor: textScaleFactor,
-        maxFontSize: maxFontSize ?? double.infinity,
-        minFontSize: minFontSize ?? 12,
+      value: hintSemantics,
+      label: hintSemantics,
+      hidden: false,
+      enabled: true,
+      obscured: false,
+      increasedValue: hintSemantics,
+      tagForChildren: SemanticsTag(hintSemantics ?? "text"),
+      child: SelectableRegion(
+        selectionControls: MaterialTextSelectionControls(),
+        focusNode: FocusNode(),
+        child: AutoSizeText(
+          text,
+          overflow: TextOverflow.ellipsis,
+          style: textStyle ??
+              const TextStyle(
+                color: Colors.black,
+                fontSize: 18,
+                fontWeight: FontWeight.w400,
+              ),
+          textAlign: textAlign,
+          maxLines: maxLines,
+          textScaleFactor: textScaleFactor,
+          maxFontSize: maxFontSize ?? double.infinity,
+          minFontSize: minFontSize ?? 12,
+          semanticsLabel: hintSemantics,
+        ),
       ),
     );
   }

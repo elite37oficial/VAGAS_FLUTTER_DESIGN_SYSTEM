@@ -1,6 +1,8 @@
 abstract class AppImages {
-  static const String logo = "assets/images/logo_elite_37.svg";
-  static const String backgroundIcons = "assets/images/background_icons.svg";
-  static const String emailIcon = "assets/images/email_icon.svg";
-  static const String lockIcon = "assets/images/lock_icon.svg";
+  static const String logoVagas = "lib/assets/images/logo_elite_vagas.svg";
+  static const String logo = "lib/assets/images/logo_elite_37.svg";
+  static const String backgroundIcons =
+      "lib/assets/images/background_icons.svg";
+  static const String emailIcon = "lib/assets/images/email_icon.svg";
+  static const String lockIcon = "lib/assets/images/lock_icon.svg";
 }

@@ -51,7 +51,7 @@ Recursos — Referências de API
 ### Widgets
 * Responsive Text Widget: `package:vagas_design_system/src/widgets/texts/responsive_text_widget.dart` Componente responsável pela responsividade de textos na aplicação.
 * Social Circle Button Widget: `package:vagas_design_system/src/widgets/buttons/social_circle_button_widget.dart` Componente do botão circular de mídias sociais.
-* App Field Widget: `package:vagas_design_system/src/widgets/fields/app_field_widget.dart` Componente responsável pelos campos de textos da aplicação.
+* App Web Field Widget: `package:vagas_design_system/src/widgets/fields/app_web_field_widget.dart` Componente responsável pelos campos de textos da aplicação web.
 
 ### Pages
 * Loading Page: `package:vagas_design_system/src/pages/loading_page.dart` Página de carregamento.
