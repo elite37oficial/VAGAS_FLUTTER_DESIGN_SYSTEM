@@ -3,7 +3,7 @@ O módulo `VAGAS_DESIGN_SYSTEM` é responsável por reunir e disponibilizar comp
 
 # Instalação
 Para instalar o Módulo `VAGAS_DESIGN_SYSTEM` basta seguir os seguintes passos:
-1.	Importar o pacote `VAGAS_DESIGN_SYSTEM` no arquivo `pubspec.yaml` do seu projeto.  
+1.	Importar o pacote `VAGAS_DESIGN_SYSTEM` no arquivo `pubspec.yaml` do seu projeto. 
     ``` yaml
     vagas_design_system:
     # path: ../../VAGAS_FLUTTER_DESIGN_SYSTEM/    #Para trabalhar com o pacote localmente.
@@ -43,18 +43,13 @@ Recursos — Referências de API
 * App Images: `package:vagas_design_system/src/themes/app_images.dart` Abstração dos caminhos dos imagens para serem utilizadas na aplicação.
 
 ### Packages
-* Font Awesome Flutter: `package:font_awesome_flutter/font_awesome_flutter.dart` Pacote responsável pelos ícones utilizados na aplicação.
-* Google Fonts: `package:google_fonts/google_fonts.dart` Pacote responsável pelas fontes utilizados na aplicação.
+* Font Awesome Flutter: `package:font_awesome_flutter/font_awesome_flutter.dart` Pacote responsável pelas fontes e ícones utilizados na aplicação.
 * Auto Size Text: `package:auto_size_text/auto_size_text.dart` Pacote responsável pela responsividade dos textos utilizados na aplicação.
 * Flutter Svg: `package:flutter_svg/flutter_svg.dart` Pacote responsável pela renderização dos arquivos SVGs utilizados na aplicação.
 
 ### Widgets
-* Responsive Text Widget: `package:vagas_design_system/src/widgets/texts/responsive_text_widget.dart` Componente responsável pela responsividade de textos na aplicação.
-* Social Circle Button Widget: `package:vagas_design_system/src/widgets/buttons/social_circle_button_widget.dart` Componente do botão circular de mídias sociais.
-* App Web Field Widget: `package:vagas_design_system/src/widgets/fields/app_web_field_widget.dart` Componente responsável pelos campos de textos da aplicação web.
+* Responsive Text Widget: `package:vagas_design_system/src/widgets/responsive_text_widget.dart` Componente responsável pela responsividade de textos na aplicação.
 
 ### Pages
-* Loading Page: `package:vagas_design_system/src/pages/loading_page.dart` Página de carregamento.
+* Loading Page: `package:vagas_design_system/src/pages/loading_page.dart` Página de carregamento padrão.
 * Error Page: `package:vagas_design_system/src/pages/error_page.dart` Página de Erro padrão.
-
-
