@@ -19,9 +19,9 @@ class TopBarWebWidget extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
+            const Spacer(),
             Row(
               children: [
-                const Spacer(),
                 SvgPicture.asset(
                   AppImages.logoHorizontal,
                   package: "vagas_design_system",
