@@ -187,7 +187,7 @@ abstract class AppThemes {
           backgroundColor: AppColors.transparent,
           disabledForegroundColor: AppColors.grey,
           elevation: 0,
-          foregroundColor: AppColors.lightGrey,
+          foregroundColor: AppColors.accentBlue,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
         ),
       ),
