@@ -11,7 +11,7 @@ class TopBarWebWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     width = width ?? MediaQuery.of(context).size.width;
     return Material(
-      color: AppColors.accentBlue,
+      color: AppColors.greyBlue,
       elevation: 5,
       child: SizedBox(
         height: height,
@@ -34,7 +34,10 @@ class TopBarWebWidget extends StatelessWidget {
                       hintSemantics: "Minhas Vagas",
                       tooltipSemantics: "Minhas Vagas",
                       textScaleFactor: 1,
-                      textStyle: Theme.of(context).textTheme.bodyMedium,
+                      textStyle:
+                          Theme.of(context).textTheme.bodyMedium!.copyWith(
+                                color: AppColors.white,
+                              ),
                       maxLines: 1,
                     ),
                   ),
@@ -46,7 +49,9 @@ class TopBarWebWidget extends StatelessWidget {
                     hintSemantics: "Minhas empresas",
                     tooltipSemantics: "Minhas empresas",
                     textScaleFactor: 1,
-                    textStyle: Theme.of(context).textTheme.bodyMedium,
+                    textStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                          color: AppColors.white,
+                        ),
                     maxLines: 1,
                   ),
                 ),
@@ -57,7 +62,9 @@ class TopBarWebWidget extends StatelessWidget {
               hintSemantics: "Bem-vindo(a), Usuário da silva!",
               tooltipSemantics: "Bem-vindo(a), Usuário da silva!",
               textScaleFactor: 1,
-              textStyle: Theme.of(context).textTheme.bodyMedium,
+              textStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                    color: AppColors.white,
+                  ),
               maxLines: 1,
             ),
           ],
