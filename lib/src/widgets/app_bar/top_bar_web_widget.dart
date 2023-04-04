@@ -57,6 +57,7 @@ class TopBarWebWidget extends StatelessWidget {
                 ),
               ],
             ),
+            const Spacer(),
             ResponsiveTextWidget(
               text: "Bem-vindo(a), Usuário da silva!",
               hintSemantics: "Bem-vindo(a), Usuário da silva!",
