@@ -21,6 +21,7 @@ class TopBarWebWidget extends StatelessWidget {
           children: [
             Row(
               children: [
+                const Spacer(),
                 SvgPicture.asset(
                   AppImages.logoHorizontal,
                   package: "vagas_design_system",
@@ -58,6 +59,7 @@ class TopBarWebWidget extends StatelessWidget {
               ],
             ),
             const Spacer(),
+            const Spacer(),
             ResponsiveTextWidget(
               text: "Bem-vindo(a), Usuário da silva!",
               hintSemantics: "Bem-vindo(a), Usuário da silva!",
@@ -68,6 +70,7 @@ class TopBarWebWidget extends StatelessWidget {
                   ),
               maxLines: 1,
             ),
+            const Spacer(),
           ],
         ),
       ),
