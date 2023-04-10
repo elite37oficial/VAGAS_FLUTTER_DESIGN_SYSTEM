@@ -48,7 +48,13 @@ Recursos — Referências de API
 * Flutter Svg: `package:flutter_svg/flutter_svg.dart` Pacote responsável pela renderização dos arquivos SVGs utilizados na aplicação.
 
 ### Widgets
-* Responsive Text Widget: `package:vagas_design_system/src/widgets/responsive_text_widget.dart` Componente responsável pela responsividade de textos na aplicação.
+* Responsive Text Widget: `package:vagas_design_system/src/widgets/texts/responsive_text_widget.dart` Componente responsável pela responsividade de textos na aplicação.
+* Filled Button Widget: `package:vagas_design_system/src/widgets/buttons/filled_button_widget.dart` Botão preenchido.
+* Outlined Button Widget: `package:vagas_design_system/src/widgets/buttons/outlined_button_widget.dart` Botão com Borda destacada.
+* Page Button Widget: `package:vagas_design_system/src/widgets/buttons/page_button_widget.dart` Botao de paginação.
+* Social CIrcle Button Widget: `package:vagas_design_system/src/widgets/buttons/social_circle_button_widget.dart` Botão de Mídias Sociais.
+* Top Bar Web Widget: `package:vagas_design_system/src/widgets/app_bar/top_bar_web_widget.dart` Componente responsável pela TopBar da aplicação web.
+* App Web Field Widget: `package:vagas_design_system/src/widgets/fields/app_web_field_widget.dart` Componente responsável pelo Campo de Texto da aplicação web.
 
 ### Pages
 * Loading Page: `package:vagas_design_system/src/pages/loading_page.dart` Página de carregamento padrão.

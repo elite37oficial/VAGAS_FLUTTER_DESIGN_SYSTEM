@@ -3,8 +3,10 @@ import 'package:vagas_design_system/vagas_design_system.dart';
 
 class TopBarWebWidget extends StatelessWidget {
   final double height;
+  final bool? isMobile;
   double? width;
-  TopBarWebWidget({Key? key, required this.height, this.width})
+  TopBarWebWidget(
+      {Key? key, required this.height, this.width, this.isMobile = false})
       : super(key: key);
 
   @override
@@ -22,10 +24,12 @@ class TopBarWebWidget extends StatelessWidget {
             const Spacer(),
             Row(
               children: [
-                SvgPicture.asset(
-                  AppImages.logoHorizontal,
-                  package: "vagas_design_system",
-                ),
+                isMobile == false
+                    ? SvgPicture.asset(
+                        AppImages.logoHorizontal,
+                        package: "vagas_design_system",
+                      )
+                    : Container(),
                 Padding(
                   padding: const EdgeInsets.only(left: 30, right: 30),
                   child: GestureDetector(

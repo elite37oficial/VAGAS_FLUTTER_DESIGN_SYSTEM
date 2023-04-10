@@ -7,4 +7,5 @@ abstract class AppImages {
       "lib/assets/images/background_icons.svg";
   static const String emailIcon = "lib/assets/images/email_icon.svg";
   static const String lockIcon = "lib/assets/images/lock_icon.svg";
+  static const String editIcon = "lib/assets/images/edit_icon.svg";
 }
