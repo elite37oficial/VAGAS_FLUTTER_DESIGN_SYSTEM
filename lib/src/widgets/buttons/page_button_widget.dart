@@ -31,7 +31,7 @@ class PageButtonWidget extends StatelessWidget {
           width: width,
           height: height,
           child: ElevatedButton(
-            onPressed: () => onPressed!(),
+            onPressed: onPressed == null ? null : () => onPressed!(),
             style: ElevatedButton.styleFrom(
                 textStyle: Theme.of(context).textTheme.headlineLarge!.copyWith(
                       color:
