@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:vagas_design_system/vagas_design_system.dart';
 
 class ErrorPage extends StatefulWidget {
-  final Function goToHome;
-  const ErrorPage({Key? key, required this.goToHome}) : super(key: key);
+  const ErrorPage({Key? key}) : super(key: key);
 
   @override
   State<ErrorPage> createState() => _ErrorPageState();

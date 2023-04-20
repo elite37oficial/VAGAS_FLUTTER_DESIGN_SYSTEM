@@ -121,6 +121,9 @@ class _AppWebFieldWidgetState extends State<AppWebFieldWidget> {
               color: AppColors.grey,
             ),
             decoration: InputDecoration(
+              counter: Container(),
+              counterText: "",
+              semanticCounterText: "",
               focusColor: AppColors.accentBlue,
               border: InputBorder.none,
               focusedBorder: InputBorder.none,
