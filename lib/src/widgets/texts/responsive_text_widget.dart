@@ -12,10 +12,12 @@ class ResponsiveTextWidget extends StatelessWidget {
   final int? maxLines;
   final String? hintSemantics;
   final String? tooltipSemantics;
+  final bool selectable;
   const ResponsiveTextWidget({
     Key? key,
     required this.text,
     this.textStyle,
+    this.selectable = true,
     this.maxLines,
     this.minFontSize,
     this.maxFontSize,
@@ -37,26 +39,43 @@ class ResponsiveTextWidget extends StatelessWidget {
       obscured: false,
       increasedValue: hintSemantics,
       tagForChildren: SemanticsTag(hintSemantics ?? "text"),
-      child: SelectableRegion(
-        selectionControls: MaterialTextSelectionControls(),
-        focusNode: FocusNode(),
-        child: AutoSizeText(
-          text,
-          overflow: TextOverflow.ellipsis,
-          style: textStyle ??
-              const TextStyle(
-                color: Colors.black,
-                fontSize: 18,
-                fontWeight: FontWeight.w400,
+      child: selectable
+          ? SelectableRegion(
+              selectionControls: MaterialTextSelectionControls(),
+              focusNode: FocusNode(),
+              child: AutoSizeText(
+                text,
+                overflow: TextOverflow.ellipsis,
+                style: textStyle ??
+                    const TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontWeight: FontWeight.w400,
+                    ),
+                textAlign: textAlign,
+                maxLines: maxLines,
+                textScaleFactor: textScaleFactor,
+                maxFontSize: maxFontSize ?? double.infinity,
+                minFontSize: minFontSize ?? 12,
+                semanticsLabel: hintSemantics,
               ),
-          textAlign: textAlign,
-          maxLines: maxLines,
-          textScaleFactor: textScaleFactor,
-          maxFontSize: maxFontSize ?? double.infinity,
-          minFontSize: minFontSize ?? 12,
-          semanticsLabel: hintSemantics,
-        ),
-      ),
+            )
+          : AutoSizeText(
+              text,
+              overflow: TextOverflow.ellipsis,
+              style: textStyle ??
+                  const TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w400,
+                  ),
+              textAlign: textAlign,
+              maxLines: maxLines,
+              textScaleFactor: textScaleFactor,
+              maxFontSize: maxFontSize ?? double.infinity,
+              minFontSize: minFontSize ?? 12,
+              semanticsLabel: hintSemantics,
+            ),
     );
   }
 }

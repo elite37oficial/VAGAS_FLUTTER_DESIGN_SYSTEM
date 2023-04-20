@@ -4,9 +4,14 @@ import 'package:vagas_design_system/vagas_design_system.dart';
 class TopBarWebWidget extends StatelessWidget {
   final double height;
   final bool? isMobile;
+  final String username;
   double? width;
   TopBarWebWidget(
-      {Key? key, required this.height, this.width, this.isMobile = false})
+      {Key? key,
+      required this.username,
+      required this.height,
+      this.width,
+      this.isMobile = false})
       : super(key: key);
 
   @override
@@ -65,7 +70,7 @@ class TopBarWebWidget extends StatelessWidget {
             const Spacer(),
             const Spacer(),
             ResponsiveTextWidget(
-              text: "Bem-vindo(a), Usuário da silva!",
+              text: "Bem-vindo(a), $username!",
               hintSemantics: "Bem-vindo(a), Usuário da silva!",
               tooltipSemantics: "Bem-vindo(a), Usuário da silva!",
               textScaleFactor: 1,

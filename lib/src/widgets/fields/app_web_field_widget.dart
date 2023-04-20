@@ -7,6 +7,7 @@ import 'package:vagas_design_system/src/widgets/widgets_export.dart';
 
 class AppWebFieldWidget extends StatefulWidget {
   final double? fontSize;
+  final int? maxLength;
   final Widget? prefixIcon;
   final String? label;
   final TextStyle? labelStyle;
@@ -31,6 +32,7 @@ class AppWebFieldWidget extends StatefulWidget {
   const AppWebFieldWidget({
     Key? key,
     this.prefixIcon,
+    this.maxLength = 200,
     this.label,
     this.labelStyle,
     this.labelSemantic,
@@ -102,6 +104,7 @@ class _AppWebFieldWidgetState extends State<AppWebFieldWidget> {
           height: widget.heigth,
           width: widget.width,
           child: TextFormField(
+            maxLength: widget.maxLength,
             readOnly: widget.readyOnly,
             obscureText: widget.isPassword ? _obscure : false,
             validator: widget.validator,
