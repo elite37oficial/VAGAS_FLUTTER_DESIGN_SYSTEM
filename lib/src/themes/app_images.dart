@@ -8,4 +8,7 @@ abstract class AppImages {
   static const String emailIcon = "lib/assets/images/email_icon.svg";
   static const String lockIcon = "lib/assets/images/lock_icon.svg";
   static const String editIcon = "lib/assets/images/edit_icon.svg";
+  static const String errorCircle = "lib/assets/images/error_circle.svg";
+  static const String successCircle = "lib/assets/images/success_circle.svg";
+  static const String successFilled = "lib/assets/images/success_filled.svg";
 }

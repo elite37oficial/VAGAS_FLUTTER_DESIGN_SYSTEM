@@ -5,3 +5,6 @@ export 'app_bar/top_bar_web_widget.dart';
 export 'buttons/outlined_button_widget.dart';
 export 'buttons/filled_button_widget.dart';
 export 'buttons/page_button_widget.dart';
+export 'popups/error_popup_widget.dart';
+export 'popups/success_popup_widget.dart';
+export 'popups/success_action_popup_widget.dart';
