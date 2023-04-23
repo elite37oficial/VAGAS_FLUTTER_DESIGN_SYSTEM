@@ -43,6 +43,7 @@ class TopBarWebWidget extends StatelessWidget {
                       text: "Minhas Vagas",
                       hintSemantics: "Minhas Vagas",
                       tooltipSemantics: "Minhas Vagas",
+                      selectable: false,
                       textScaleFactor: 1,
                       textStyle:
                           Theme.of(context).textTheme.bodyMedium!.copyWith(
@@ -57,6 +58,7 @@ class TopBarWebWidget extends StatelessWidget {
                   child: ResponsiveTextWidget(
                     text: "Minhas empresas",
                     hintSemantics: "Minhas empresas",
+                    selectable: false,
                     tooltipSemantics: "Minhas empresas",
                     textScaleFactor: 1,
                     textStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
@@ -71,8 +73,8 @@ class TopBarWebWidget extends StatelessWidget {
             const Spacer(),
             ResponsiveTextWidget(
               text: "Bem-vindo(a), $username!",
-              hintSemantics: "Bem-vindo(a), Usuário da silva!",
-              tooltipSemantics: "Bem-vindo(a), Usuário da silva!",
+              hintSemantics: "Bem-vindo(a), $username!",
+              tooltipSemantics: "Bem-vindo(a), $username!",
               textScaleFactor: 1,
               textStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
                     color: AppColors.white,
