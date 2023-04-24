@@ -8,15 +8,17 @@ class FilledButtonWidget extends StatelessWidget {
   final Widget? child;
   final Color primaryColor;
   final Color secundaryColor;
+  Color? borderColor;
   final String tooltip;
   final String hintSemantics;
 
-  const FilledButtonWidget({
+  FilledButtonWidget({
     Key? key,
     required this.height,
     required this.width,
     this.primaryColor = AppColors.greyBlue,
     this.secundaryColor = AppColors.white,
+    this.borderColor,
     this.onPressed,
     this.child,
     required this.tooltip,
@@ -25,6 +27,7 @@ class FilledButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    borderColor = primaryColor;
     return Semantics(
       tooltip: tooltip,
       hint: hintSemantics,
@@ -39,14 +42,16 @@ class FilledButtonWidget extends StatelessWidget {
               textStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
                     color: onPressed != null ? secundaryColor : AppColors.grey,
                   ),
-              foregroundColor: primaryColor,
+              foregroundColor: borderColor,
+              side: BorderSide(color: borderColor ?? primaryColor),
               backgroundColor: primaryColor,
               disabledForegroundColor: AppColors.grey,
               disabledBackgroundColor: AppColors.lightGrey.withOpacity(0.3),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5),
                 side: BorderSide(
-                  color: primaryColor,
+                  width: 1,
+                  color: borderColor != null ? borderColor! : primaryColor,
                 ),
               ),
             ),
