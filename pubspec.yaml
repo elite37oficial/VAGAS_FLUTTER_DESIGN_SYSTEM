@@ -14,6 +14,7 @@ dependencies:
   flutter_svg: 1.1.6
   google_fonts: ^4.0.3
   dropdown_button2: ^2.1.0
+  quill_html_editor: ^2.1.8
 
 dev_dependencies:
   flutter_test:

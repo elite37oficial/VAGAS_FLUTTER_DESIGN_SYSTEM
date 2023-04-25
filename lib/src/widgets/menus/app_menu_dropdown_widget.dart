@@ -84,10 +84,23 @@ class _AppMenuDropDownWidgetState extends State<AppMenuDropDownWidget> {
                 ? Container(
                     height: widget.height,
                     decoration: BoxDecoration(
+                        color: AppColors.lightGrey.withOpacity(0.3),
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(color: _borderColor)),
-                    child:
-                        Center(child: ResponsiveTextWidget(text: widget.hint)),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: ResponsiveTextWidget(
+                          text: widget.hint,
+                          textStyle: Theme.of(context)
+                              .textTheme
+                              .bodyMedium!
+                              .copyWith(color: AppColors.grey),
+                          maxLines: 1,
+                        ),
+                      ),
+                    ),
                   )
                 : Container(
                     height: widget.height,

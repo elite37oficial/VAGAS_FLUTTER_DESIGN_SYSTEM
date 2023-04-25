@@ -10,3 +10,4 @@ export 'popups/error_popup_widget.dart';
 export 'popups/success_popup_widget.dart';
 export 'popups/success_action_popup_widget.dart';
 export 'menus/app_menu_dropdown_widget.dart';
+export 'fields/big_static_web_field_widget.dart';
