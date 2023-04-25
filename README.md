@@ -55,6 +55,7 @@ Recursos — Referências de API
 * Social Circle Button Widget: `package:vagas_design_system/src/widgets/buttons/social_circle_button_widget.dart` Botão de Mídias Sociais.
 * Top Bar Web Widget: `package:vagas_design_system/src/widgets/app_bar/top_bar_web_widget.dart` Componente responsável pela TopBar da aplicação web.
 * App Web Field Widget: `package:vagas_design_system/src/widgets/fields/app_web_field_widget.dart` Componente responsável pelo Campo de Texto da aplicação web.
+* Static Web Field Widget: `package:vagas_design_system/src/widgets/fields/static_web_field_widget.dart` Componente responsável pelo Campo de Texto Estático da aplicação web.
 * Error PopUp Widget: `package:vagas_design_system/src/widgets/popups/error_popup_widget.dart` Componente responsável pelo PopUp Simples de Erros da aplicação web.
 * Success PopUp Widget: `package:vagas_design_system/src/widgets/popups/success_popup_widget.dart` Componente responsável pelo PopUp Simples de Sucesso da aplicação web.
 * Success Action PopUp Widget: `package:vagas_design_system/src/widgets/popups/success_action_popup_widget.dart` Componente responsável pelo PopUp de Ação de Sucesso da aplicação web.
