@@ -10,11 +10,13 @@ class BigStaticWebFieldWidget extends StatefulWidget {
   final String? fieldSemantic;
   final TextEditingController textController;
   final String hint;
+  final Function? onChanged;
   const BigStaticWebFieldWidget({
     Key? key,
     required this.height,
     required this.onError,
     required this.textController,
+    this.onChanged,
     this.fieldSemantic,
     this.hintSemantic,
     required this.hint,
@@ -71,7 +73,9 @@ class _BigStaticWebFieldWidgetState extends State<BigStaticWebFieldWidget> {
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            border: Border.all(color: _borderColor),
+            border: Border.all(
+              color: widget.onError ? AppColors.red : _borderColor,
+            ),
           ),
           height: widget.height,
           child: Column(
@@ -91,7 +95,6 @@ class _BigStaticWebFieldWidgetState extends State<BigStaticWebFieldWidget> {
                     color: AppColors.lightGrey.withOpacity(0.5), height: 1.5),
               ),
               QuillHtmlEditor(
-                
                 text: "\n ${widget.textController.text}",
                 hintText: widget.hint,
                 controller: controller,
@@ -100,12 +103,12 @@ class _BigStaticWebFieldWidgetState extends State<BigStaticWebFieldWidget> {
                 minHeight: widget.height - 80,
                 padding: const EdgeInsets.only(left: 15, right: 15, top: 5),
                 hintTextPadding: const EdgeInsets.symmetric(horizontal: 20),
-                hintTextStyle:
-                    Theme.of(context).textTheme.bodyMedium!.copyWith(
-                          fontSize: 18,
-                          color: AppColors.lightGrey.withOpacity(0.5),
-                        ),
-                onTextChanged: (text) => widget.textController.text = text,
+                hintTextStyle: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                      fontSize: 18,
+                      color: AppColors.lightGrey.withOpacity(0.5),
+                    ),
+                onTextChanged: (String? value) =>
+                    setState(() => widget.textController.text = value ?? ""),
               ),
             ],
           ),
