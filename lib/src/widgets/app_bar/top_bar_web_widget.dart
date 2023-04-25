@@ -48,7 +48,7 @@ class TopBarWebWidget extends StatelessWidget {
                     highlightColor: AppColors.transparent,
                     hoverColor: AppColors.transparent,
                     splashColor: AppColors.transparent,
-                    onTap: () => enterprisesFunction(),
+                    onTap: () => jobsFunction(),
                     child: ResponsiveTextWidget(
                       text: "Minhas Vagas",
                       hintSemantics: "Minhas Vagas",
