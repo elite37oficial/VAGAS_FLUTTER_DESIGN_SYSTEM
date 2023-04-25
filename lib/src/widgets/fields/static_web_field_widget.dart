@@ -15,7 +15,7 @@ class StaticWebFieldWidget extends StatefulWidget {
   final TextStyle? hintStyle;
   final String? hintSemantic;
   final String? fieldSemantic;
-  final double? heigth;
+  final double? height;
   final double? width;
   final TextEditingController controller;
   final List<TextInputFormatter>? inputFormatters;
@@ -40,7 +40,7 @@ class StaticWebFieldWidget extends StatefulWidget {
     this.hintStyle,
     this.hintSemantic,
     this.fieldSemantic,
-    this.heigth,
+    this.height,
     this.width,
     required this.controller,
     this.inputFormatters,
@@ -120,7 +120,7 @@ class _StaticWebFieldWidgetState extends State<StaticWebFieldWidget> {
                 borderRadius: BorderRadius.circular(10),
               ),
               padding: const EdgeInsets.only(top: 5),
-              height: widget.heigth,
+              height: widget.height,
               width: widget.width,
               child: TextFormField(
                 maxLength: widget.maxLength,
