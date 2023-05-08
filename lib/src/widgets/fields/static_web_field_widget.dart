@@ -104,7 +104,9 @@ class _StaticWebFieldWidgetState extends State<StaticWebFieldWidget> {
                       maxFontSize: widget.fontSize,
                       textStyle:
                           Theme.of(context).textTheme.bodySmall!.copyWith(
-                                color: AppColors.black,
+                                color: widget.onError
+                                    ? AppColors.red
+                                    : AppColors.black,
                                 fontWeight: FontWeight.w700,
                               ),
                       hintSemantics: widget.label,
@@ -136,7 +138,7 @@ class _StaticWebFieldWidgetState extends State<StaticWebFieldWidget> {
                 style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.normal,
-                  color: AppColors.grey,
+                  color: AppColors.black,
                 ),
                 decoration: InputDecoration(
                   counterText: "",

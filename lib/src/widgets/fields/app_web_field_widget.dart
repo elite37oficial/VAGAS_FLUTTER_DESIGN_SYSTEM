@@ -118,7 +118,7 @@ class _AppWebFieldWidgetState extends State<AppWebFieldWidget> {
             style: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.normal,
-              color: AppColors.grey,
+              color: AppColors.black,
             ),
             decoration: InputDecoration(
               counterText: "",
