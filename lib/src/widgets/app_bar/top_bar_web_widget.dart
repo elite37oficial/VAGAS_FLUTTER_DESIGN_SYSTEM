@@ -38,66 +38,110 @@ class _TopBarWebWidgetState extends State<TopBarWebWidget> {
 
     entry = OverlayEntry(
       builder: (builder) => Positioned(
-        height: 130,
+        height: 190,
         width: widget.widthPopup,
         child: CompositedTransformFollower(
           link: _layerLink,
           showWhenUnlinked: false,
-          offset: const Offset(-20, 30),
+          offset: const Offset(-80, 30),
           child: Material(
             elevation: 0,
             color: AppColors.white,
-            borderRadius: BorderRadius.circular(10),
-            child: ListView(
-              physics: const NeverScrollableScrollPhysics(),
+            borderRadius: BorderRadius.circular(5),
+            child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 5, bottom: 5),
-                  child: ListTile(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                    onTap: () {},
-                    leading: const Icon(Icons.person_rounded),
-                    title: ResponsiveTextWidget(
-                      text: "Perfil",
-                      selectable: false,
-                      textStyle:
-                          Theme.of(context).textTheme.bodyMedium!.copyWith(
-                                fontWeight: FontWeight.w700,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 5, bottom: 5),
+                    child: SizedBox(
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 5, right: 5),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                top: 15,
+                                bottom: 15,
                               ),
-                      maxFontSize: 24,
-                      minFontSize: 18,
-                      maxLines: 1,
+                              child: ResponsiveTextWidget(
+                                text: "Recrutador",
+                                textStyle: Theme.of(context)
+                                    .textTheme
+                                    .bodyMedium!
+                                    .copyWith(
+                                      color: AppColors.black,
+                                      fontWeight: FontWeight.w700,
+                                    ),
+                                maxFontSize: 24,
+                                minFontSize: 18,
+                                maxLines: 1,
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 5, bottom: 5),
+                              child: ResponsiveTextWidget(
+                                text: "Gustavo",
+                                textStyle: Theme.of(context)
+                                    .textTheme
+                                    .bodyMedium!
+                                    .copyWith(
+                                      color: AppColors.black,
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                                maxFontSize: 20,
+                                minFontSize: 10,
+                                maxLines: 1,
+                              ),
+                            ),
+                            ResponsiveTextWidget(
+                              text: "gustavohenricknapolitano@gmail.com",
+                              textStyle: Theme.of(context)
+                                  .textTheme
+                                  .bodyMedium!
+                                  .copyWith(
+                                    color: AppColors.black,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                              maxFontSize: 20,
+                              minFontSize: 10,
+                              maxLines: 3,
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 5, bottom: 5),
-                  child: ListTile(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                    onTap: () {
-                      _hideToolTip();
-                      widget.logout(context);
-                    },
-                    leading:
-                        const Icon(Icons.logout_rounded, color: AppColors.red),
-                    title: ResponsiveTextWidget(
-                      text: "Sair",
-                      selectable: false,
-                      textStyle:
-                          Theme.of(context).textTheme.bodyMedium!.copyWith(
-                                color: AppColors.red,
-                                fontWeight: FontWeight.w700,
-                              ),
-                      maxFontSize: 24,
-                      minFontSize: 18,
-                      maxLines: 1,
+                  Padding(
+                    padding: const EdgeInsets.only(top: 5, bottom: 5),
+                    child: ListTile(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      onTap: () {
+                        _hideToolTip();
+                        widget.logout(context);
+                      },
+                      leading: const Icon(Icons.logout_rounded,
+                          color: AppColors.red),
+                      title: ResponsiveTextWidget(
+                        text: "Sair da Conta",
+                        selectable: false,
+                        textStyle:
+                            Theme.of(context).textTheme.bodyMedium!.copyWith(
+                                  color: AppColors.red,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                        maxFontSize: 24,
+                        minFontSize: 18,
+                        maxLines: 1,
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),
